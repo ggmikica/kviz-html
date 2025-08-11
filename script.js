@@ -13,11 +13,11 @@
       speak(`Srećno, ${imeKorisnika} ${prezimeKorisnika}!`);
     }
     // ----------- KONFIGURACIJA -----------
-    const Q1_QUESTIONS = 5;   // sabiranje
-    const Q2_QUESTIONS = 5;   // množenje
-    const Q3_QUESTIONS = 4;   // deljenje
+    const Q1_QUESTIONS = 2;   // sabiranje
+    const Q2_QUESTIONS = 2;   // množenje
+    const Q3_QUESTIONS = 2;   // deljenje
     const Q4_QUESTIONS = 2;   // simpleQuestions1
-    const Q5_QUESTIONS = 3;   // simpleQuestions2
+    const Q5_QUESTIONS = 1;   // simpleQuestions2
     const Q6_QUESTIONS = 1;  // simpleQuestions3 (teža pitanja)
     const TOTAL = Q1_QUESTIONS
                   + Q2_QUESTIONS
@@ -270,11 +270,11 @@ function zavrsiKviz(brojPoena) {
   const krajDiv = document.getElementById("kraj");
   let poruka = `${imeKorisnika}, završio si kviz sa ${brojPoena} poena! `;
 
-  if (brojPoena === 100) {
+  if (brojPoena === TOTAL*5) {
     poruka += "Savršeno! 👑";
-  } else if (brojPoena >= 70) {
+  } else if (brojPoena >= 0.7*TOTAL*5) {
     poruka += "Odlično! 💪";
-  } else if (brojPoena >= 50) {
+  } else if (brojPoena >=  0.5*TOTAL*5) {
     poruka += "Dobro je, ali možeš još bolje! 😉";
   } else {
     poruka += "Ne brini, sledeći put ćeš biti bolji! 🚀";
@@ -283,4 +283,5 @@ function zavrsiKviz(brojPoena) {
   krajDiv.textContent = poruka;
   krajDiv.style.display = "block";
 }
+
 
