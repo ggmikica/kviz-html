@@ -238,6 +238,7 @@ function prikaziDugmeKraj() {
       diploma.style.display = "none";
       document.getElementById("porukaKraj").textContent = "Hvala na učešću!";
     window.close();
+    window.location.href = "https://ggmikica.wordpress.com/";
     };
 
     // dugme „Odigraj ponovo”
@@ -282,3 +283,4 @@ function zavrsiKviz(brojPoena) {
   krajDiv.textContent = poruka;
   krajDiv.style.display = "block";
 }
+
