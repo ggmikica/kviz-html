@@ -37,16 +37,16 @@
                   + Q6_QUESTIONS;
     // 10 jednostavnih pitanja
     const simpleQuestions1 = [
-      { text: 'Zbir brojeva 5 i –3 je:',        options: [2, -2, 3, 1],     correctIndex: 0 },
-      { text: 'Razlika brojeva 7 i 2 je:',      options: [5, 4, 3, 6],      correctIndex: 0 },
-      { text: 'Zbir brojeva –4 i –6 je:',       options: [-10, -8, -12, -6],correctIndex: 0 },
-      { text: 'Razlika brojeva 8 i –3 je:',     options: [11, 5, 15, 8],    correctIndex: 0 },
-      { text: 'Proizvod brojeva 3 i –2 je:',    options: [-6, 6, -5, 0],    correctIndex: 0 },
-      { text: 'Proizvod brojeva –5 i –4 je:',   options: [20, -20, 10, 15], correctIndex: 0 },
-      { text: 'Količnik brojeva 12 i 4 je:',    options: [3, 4, 2, 6],      correctIndex: 0 },
-      { text: 'Količnik brojeva –12 i 3 je:',   options: [-4, 4, -3, 6],    correctIndex: 0 },
-      { text: 'Zbir brojeva 0 i 7 je:',         options: [7, 0, -7, 14],    correctIndex: 0 },
-      { text: 'Razlika brojeva 9 i 15 je:',     options: [-6, 6, -9, 3],    correctIndex: 0 }
+      { text: 'Zbir brojeva 5 i –3',        options: [2, -2, 3, 1],     correctIndex: 0 },
+      { text: 'Razlika brojeva 7 i 2',      options: [5, 4, 3, 6],      correctIndex: 0 },
+      { text: 'Zbir brojeva –4 i –6',       options: [-10, -8, -12, -6],correctIndex: 0 },
+      { text: 'Razlika brojeva 8 i –3',     options: [11, 5, 15, 8],    correctIndex: 0 },
+      { text: 'Proizvod brojeva 3 i –2',    options: [-6, 6, -5, 0],    correctIndex: 0 },
+      { text: 'Proizvod brojeva –5 i –4',   options: [20, -20, 10, 15], correctIndex: 0 },
+      { text: 'Količnik brojeva 12 i 4',    options: [3, 4, 2, 6],      correctIndex: 0 },
+      { text: 'Količnik brojeva –12 i 3',   options: [-4, 4, -3, 6],    correctIndex: 0 },
+      { text: 'Zbir brojeva 0 i 7',         options: [7, 0, -7, 14],    correctIndex: 0 },
+      { text: 'Razlika brojeva 9 i 15',     options: [-6, 6, -9, 3],    correctIndex: 0 }
     ];
     // 10 pitanja srednje težine
     const simpleQuestions2 = [
@@ -142,17 +142,17 @@
         const a = randomInt(), b = randomInt();
         correctAnswer = a + b;
          
-         speak(`Zbir brojeva ${a} i ${b} je:`);
+         speak(`Zbir brojeva ${a} i ${b}`);
          
-        questionEl.innerText = `Zbir brojeva ${a} i ${b} je:`;
+        questionEl.innerText = `Zbir brojeva ${a} i ${b}`;
       }
       else if (count <= Q1_QUESTIONS + Q2_QUESTIONS) {
         const a = randomInt(), b = randomInt();
         correctAnswer = a * b;
 
-         speak(`Proizvod brojeva ${a} i ${b} je:`);
+         speak(`Proizvod brojeva ${a} i ${b}`);
          
-        questionEl.innerText = `Proizvod brojeva ${a} i ${b} je:`;
+        questionEl.innerText = `Proizvod brojeva ${a} i ${b}`;
       }
       else if (count <= Q1_QUESTIONS + Q2_QUESTIONS + Q3_QUESTIONS) {
         const res = Math.floor(Math.random() * 11) + 1;
@@ -356,6 +356,7 @@ function posalji() {
 
 
 }
+
 
 
 
