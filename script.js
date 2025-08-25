@@ -19,16 +19,16 @@
       document.getElementById("quiz").style.display = "block";
       document.getElementById("pozdrav").textContent = `Srećno, ${imeKorisnika}!`;
 
-    //  speak(`Srećno, ${imeKorisnika}!`);
+      speak(`Srećno, ${imeKorisnika}!`);
 
     }
     // ----------- KONFIGURACIJA -----------
-    const Q1_QUESTIONS = 10;   // sabiranje
+    const Q1_QUESTIONS = 11;   // sabiranje
     const Q2_QUESTIONS = 5;   // množenje
     const Q3_QUESTIONS = 0;   // deljenje
     const Q4_QUESTIONS = 2;   // simpleQuestions1
     const Q5_QUESTIONS = 2;   // simpleQuestions2
-    const Q6_QUESTIONS = 1;  // simpleQuestions3 (teža pitanja)
+    const Q6_QUESTIONS = 0;  // simpleQuestions3 (teža pitanja)
     const TOTAL = Q1_QUESTIONS
                   + Q2_QUESTIONS
                   + Q3_QUESTIONS
@@ -338,4 +338,5 @@ function posalji() {
 
 
 }
+
 
