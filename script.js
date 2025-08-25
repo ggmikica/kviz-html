@@ -20,7 +20,7 @@
       document.getElementById("pozdrav").textContent = `Srećno, ${imeKorisnika}!`;
 
       speak(`Srećno, ${imeKorisnika}!`);
-
+      showQuestion();
     }
     // ----------- KONFIGURACIJA -----------
     const Q1_QUESTIONS = 11;   // sabiranje
@@ -141,22 +141,34 @@
       if (count <= Q1_QUESTIONS) {
         const a = randomInt(), b = randomInt();
         correctAnswer = a + b;
+         
+         speak(`Zbir brojeva ${a} i ${b} je:`);
+         
         questionEl.innerText = `Zbir brojeva ${a} i ${b} je:`;
       }
       else if (count <= Q1_QUESTIONS + Q2_QUESTIONS) {
         const a = randomInt(), b = randomInt();
         correctAnswer = a * b;
+
+         speak(`Proizvod brojeva ${a} i ${b} je:`);
+         
         questionEl.innerText = `Proizvod brojeva ${a} i ${b} je:`;
       }
       else if (count <= Q1_QUESTIONS + Q2_QUESTIONS + Q3_QUESTIONS) {
         const res = Math.floor(Math.random() * 11) + 1;
         const b   = randomInt(), a = res * b;
         correctAnswer = res;
+
+         speak(`Koliko je ${a} / ${b}?`);
+         
         questionEl.innerText = `Koliko je ${a} / ${b}?`;
       }
       else if (count <= Q1_QUESTIONS + Q2_QUESTIONS + Q3_QUESTIONS + Q4_QUESTIONS) {
         const idx = indices1[count - Q1_QUESTIONS - Q2_QUESTIONS - Q3_QUESTIONS - 1];
         const q   = simpleQuestions1[idx];
+
+         speak(`${q.text}`);
+         
         questionEl.innerText  = q.text;
         correctAnswer         = q.options[q.correctIndex];
         options               = [...q.options];
@@ -164,6 +176,9 @@
       else if (count <= Q1_QUESTIONS + Q2_QUESTIONS + Q3_QUESTIONS + Q4_QUESTIONS + Q5_QUESTIONS) {
         const idx = indices2[count - Q1_QUESTIONS - Q2_QUESTIONS - Q3_QUESTIONS - Q4_QUESTIONS - 1];
         const q   = simpleQuestions2[idx];
+        
+         speak(`${q.text}`);
+         
         questionEl.innerText  = q.text;
         correctAnswer         = q.options[q.correctIndex];
         options               = [...q.options];
@@ -178,6 +193,9 @@
           - Q5_QUESTIONS
           - 1];
         const q   = simpleQuestions3[idx];
+
+         speak(`${q.text}`);
+         
         questionEl.innerText  = q.text;
         correctAnswer         = q.options[q.correctIndex];
         options               = [...q.options];
@@ -338,5 +356,6 @@ function posalji() {
 
 
 }
+
 
 
