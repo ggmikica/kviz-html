@@ -3,6 +3,23 @@
       text-align: center;
       margin-top: 50px;
     }
+/* Override tamne boje za polje za unos imena */
+#intro input[type="text"] {
+  background-color: #ffffff;    /* bela pozadina */
+  color: #1e293b;               /* tamno siva ili crna boja teksta */
+  border: 1px solid #cbd5e1;    /* svetlo siv okvir */
+  padding: 0.5rem 0.75rem;       /* unutrašnji razmak */
+  font-size: 1rem;              /* čitljivija veličina slova */
+  border-radius: 4px;           /* zaobljeni uglovi */
+  width: 100%;                  /* zauzima širinu roditelja */
+  max-width: 300px;             /* ograniči maksimalnu širinu */
+  box-sizing: border-box;       /* padding ne rasteže ukupnu širinu */
+}
+
+/* Placeholder tekst (ako ga koristiš) */
+#intro input[type="text"]::placeholder {
+  color: #94a3b8;               /* svetlo siva boja za hint tekst */
+}
     #quiz {
       display: none;
     }
@@ -176,4 +193,5 @@ button {
 
 button:hover {
   background-color: #45a049; /* tamnija zelena kad se pređe mišem */
+
 }
